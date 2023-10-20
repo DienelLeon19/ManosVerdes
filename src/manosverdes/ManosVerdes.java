@@ -4,7 +4,7 @@ public class ManosVerdes {
     
     public static void main(String[] args) 
     {
-        FrameGuiaApp Ref = new FrameGuiaApp();
+        FrameLogin Ref = new FrameLogin();
         Ref.setLocationRelativeTo(Ref);
         Ref.setVisible(true);
       

@@ -1,10 +1,20 @@
     package manosverdes;
-
+import Entidades.Usuario;
+    
 public class FrameGuiaApp extends javax.swing.JFrame {
 
+    FrameLogin Padre;
+    Usuario user;
+            
     public FrameGuiaApp() 
     {
         initComponents();
+    }
+    public FrameGuiaApp(FrameLogin Padre,Usuario user) 
+    {
+        initComponents();
+        this.Padre=Padre;
+       this.user = user;
     }
 
     @SuppressWarnings("unchecked")
@@ -16,6 +26,9 @@ public class FrameGuiaApp extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -33,7 +46,7 @@ public class FrameGuiaApp extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 270, 530));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 270, 530));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/reutiliza.png"))); // NOI18N
         jButton2.setBorder(null);
@@ -45,7 +58,7 @@ public class FrameGuiaApp extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 140, 270, 530));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 110, 270, 530));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Group 62.png"))); // NOI18N
         jButton3.setBorder(null);
@@ -57,7 +70,7 @@ public class FrameGuiaApp extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 270, 530));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 270, 530));
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Aporta_1.png"))); // NOI18N
         jButton4.setBorder(null);
@@ -69,7 +82,24 @@ public class FrameGuiaApp extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 140, 270, 530));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 110, 270, 530));
+
+        jLabel2.setText("Nombre");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 160, 30));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Dat2/Rectangle 129 (1).png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 260, 50));
+
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Dat2/Group 88.png"))); // NOI18N
+        jButton5.setBorder(null);
+        jButton5.setBorderPainted(false);
+        jButton5.setContentAreaFilled(false);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 640, 270, 70));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/FondoBase.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -125,8 +155,18 @@ public class FrameGuiaApp extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        this.Padre.setLocationRelativeTo(Padre);
+        this.Padre.setVisible(true);
+        this.setVisible(false);
+
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     
-    
+    public void Modificar(String name)
+    {
+        jLabel2.setText(name);
+    }
     
     
     
@@ -165,7 +205,10 @@ public class FrameGuiaApp extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
